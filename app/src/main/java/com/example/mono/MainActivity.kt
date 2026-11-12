@@ -1387,13 +1387,13 @@ class MainActivity : AppCompatActivity(), NfcAdapter.ReaderCallback {
             addView(body)
         }
         if (badge == null) return card
-        // The card clips its children, so the badge lives in a wrapper to be able to stick out past the right edge
+        // The card clips its children, so the badge lives in a wrapper on top of it, kept inside the right edge (outside it gets cut in portrait)
         return FrameLayout(this).apply {
             clipChildren = false
             addView(card)
             addView(badge, FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.TOP or Gravity.END
-            ).apply { setMargins(0, dp(6), -dp(10), 0) })
+            ).apply { setMargins(0, dp(6), dp(6), 0) })
         }
     }
 
