@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Grilla tab: fills the remaining height so all 4 board sides fit -->
+    <com.example.mono.PropertyGridView
+        android:id="@+id/property_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Lista / Jugadores tabs -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Board Properties RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_board_properties"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:visibility="gone"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_property_card" />
+
+            <!-- Registered Players -->
+            <LinearLayout
+                android:id="@+id/layout_players"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_players"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_player" />
+
+                    <TextView
+                        android:id="@+id/tv_empty_players"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Aún no hay jugadores registrados"
+                        android:textColor="@color/text_on_bg"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_pregame_actions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_add_player"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Agregar jugador"
+                            android:maxLines="1"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="13sp"
+                            android:textColor="@color/action"
+                            app:backgroundTint="@color/action_soft"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/ic_person_add"
+                            app:iconGravity="textStart"
+                            app:iconPadding="4dp"
+                            app:iconSize="18dp"
+                            app:iconTint="@color/action" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_start_game"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="Iniciar juego"
+                            android:maxLines="1"
+                            android:paddingHorizontal="8dp"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            app:backgroundTint="@color/action"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/ic_play"
+                            app:iconGravity="textStart"
+                            app:iconPadding="4dp"
+                            app:iconSize="18dp"
+                            app:iconTint="@color/white" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_reset_game"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Reiniciar juego"
+                        android:textColor="@color/close_red_on_bg"
+                        app:icon="@drawable/ic_reset"
+                        app:iconGravity="textStart"
+                        app:iconPadding="6dp"
+                        app:iconTint="@color/close_red_on_bg" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ink">#1E1C1A</color>
+    <color name="slate">#5E5A56</color>
+
+    <!-- UI accent: the board red (#F44336, hue 4) with lower saturation and luminosity, used as a scale. Green is for action / accept buttons. -->
+    <color name="accent_mid">#D04339</color>
+    <color name="accent_soft">#FADDDB</color>
+    <color name="accent_dark">#7E211B</color>
+    <color name="accent_icon">#C23329</color>
+    <color name="accent_icon_active">#A3281F</color>
+    <color name="accent_icon_pressed">#811F18</color>
+    <color name="action">#1F7443</color>
+    <color name="action_soft">#D5EFDD</color>
+    <color name="on_action">#FFFFFF</color>
+    <color name="mint">#F4BDB9</color>
+    <color name="sun">#FAD58A</color>
+    <color name="close_red">#D32F2F</color>
+    <color name="close_red_light">#FF6B6B</color>
+
+    <!-- Semantic tokens: overridden in values-night -->
+    <color name="surface">#FFFFFFFF</color>
+    <color name="text_primary">#1E1C1A</color>
+    <color name="text_secondary">#5E5A56</color>
+    <color name="text_on_bg">#1E1C1A</color>
+    <color name="close_red_on_bg">#D32F2F</color>
+    <color name="frost">#F4F3F0</color>
+    <color name="key_bg">#FADDDB</color>
+    <color name="board_bg">#CFF3E4</color>
+    <color name="board_center">#B2EBF2</color>
+    <color name="board_line">#1E1C1A</color>
+    <color name="background_light">#F7F5F1</color>
+    <color name="background_dark">#E5E1D8</color>
+
+    <color name="blue_chip">#59A6FF</color>
+    <color name="red_chip">#FF6B6B</color>
+    <color name="green_chip">#3CCB7A</color>
+</resources>

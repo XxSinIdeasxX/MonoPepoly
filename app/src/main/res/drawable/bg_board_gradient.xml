@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Neutral warm-gray background so the board, cards and terminal colors stand out -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="270"
+        android:endColor="@color/background_dark"
+        android:startColor="@color/background_light" />
+</shape>

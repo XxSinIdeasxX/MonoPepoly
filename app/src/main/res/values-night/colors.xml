@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode: dark screen, light gray cards, same board colors with a dimmer green -->
+    <!-- Dark mode keeps the yellow accents -->
+    <color name="accent_mid">#F2A900</color>
+    <color name="accent_soft">#FFF3C4</color>
+    <color name="accent_dark">#8F5E00</color>
+    <color name="accent_icon">#FFC933</color>
+    <color name="accent_icon_active">#FFD166</color>
+    <color name="accent_icon_pressed">#C99700</color>
+    <color name="mint">#FFE08A</color>
+    <color name="key_bg">#FFF3C4</color>
+    <color name="text_on_bg">#ECEFEA</color>
+    <color name="close_red_on_bg">#FF6B6B</color>
+    <color name="surface">#FFE3E5E3</color>
+    <color name="frost">#FFCDD1CD</color>
+    <color name="board_bg">#6FA890</color>
+    <color name="board_center">#6AA6AE</color>
+    <color name="background_light">#17201B</color>
+    <color name="background_dark">#0E1411</color>
+</resources>
